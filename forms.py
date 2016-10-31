@@ -14,3 +14,7 @@ class LoginForm(FlaskForm):
 	password = PasswordField('Password', validators=[DataRequired("Please enter a password."), Length(min=6, message="Passwords must be 6 characters or more.")])
 	submit = SubmitField('Sign in')
 
+class AddressForm(FlaskForm):
+	address= StringField('Address', validators=[DataRequired("Please enter an address.")])
+	submit = SubmitField('Search')
+
